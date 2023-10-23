@@ -1,0 +1,68 @@
+.menu {
+  width: 100%;
+  background: linear-gradient(217deg, #cd9b6a, rgba(205, 153, 106, 0) 70.71%),
+    linear-gradient(127deg, #cd9b6a, rgba(205, 155, 106, 0.22) 70.71%),
+    linear-gradient(336deg, #e74b36, rgba(231, 75, 54, 0.75) 70.71%);
+  z-index: 10;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: 0;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  padding: 50px 0;
+  //   height: 0 !important;
+  .menu-content {
+    border: solid;
+    .menu-content-item {
+      > h2 {
+        font-size: 53px;
+        margin-bottom: 16px;
+        > a {
+          color: var(--header-color);
+        }
+      }
+      > ul {
+        margin-left: 58px;
+        color: var(--header-color);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        > li {
+          > a {
+            font-size: 19px;
+            color: var(--header-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-open {
+  animation-name: menu-open;
+}
+
+.menu-close {
+  animation-name: menu-close;
+}
+
+@keyframes menu-open {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100vh;
+  }
+}
+
+@keyframes menu-close {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: 0;
+  }
+}
