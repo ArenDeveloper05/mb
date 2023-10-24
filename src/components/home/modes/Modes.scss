@@ -1,0 +1,36 @@
+.modes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 36px;
+  margin-top: 24px;
+  &-mode {
+    flex: 1;
+    border-radius: 6px;
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    > p {
+      font-size: 26px;
+      color: white;
+      font-family: "Circe", sans-serif;
+    }
+  }
+  .self-employed {
+    background-image: url(../../../assets/images/employmed_bg.png);
+  }
+  .antikrizis {
+    background-color: #fb2836;
+    position: relative;
+    > img {
+      position: absolute;
+      max-width: 140px;
+      right: -16px;
+      bottom: 0px;
+      filter: hue-rotate(34deg) brightness(1.3);
+    }
+  }
+}

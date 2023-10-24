@@ -1,24 +1,18 @@
-import Container from "../common/container/Container";
 import "./Home.scss";
-import DigitalPlatform from "./digital-platform/DigitalPlatform";
 import MyBusiness from "./my-business/MyBusiness";
 import SearchSite from "./search-site/SearchSite";
 import Services from "./services/Services";
 import SuccessStory from "./success-story/SuccessStory";
+import Faq from "./faq/Faq";
+import Modes from "./modes/Modes";
+import DigitalPlatform from "./digital-platform/DigitalPlatform";
 const Home = () => {
   return (
     <div className="home">
-      <Container>
-        <MyBusiness />
-
-        <Services />
-
-        <DigitalPlatform />
-
-        <SuccessStory />
-
-        <SearchSite />
-      </Container>
+      <Modes />
+      <MyBusiness />
+      <Services />
+      <DigitalPlatform />
     </div>
   );
 };

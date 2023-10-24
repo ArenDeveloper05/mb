@@ -18,7 +18,10 @@ const Menu = ({ open }) => {
       }`}
     >
       <Container>
-        <div className="menu-content">
+        <div
+          className="menu-content"
+          style={{ display: open ? "block" : "none" }}
+        >
           {menuConfig.map((item) => {
             return <MenuItem item={item} key={item.id} />;
           })}
