@@ -24,7 +24,8 @@ const FooterTopFeedbackModalContentForm = () => {
         <input
           type="text"
           placeholder="Например: Иван Юрьевич"
-          name={inputsVal.name}
+          name="name"
+          value={inputsVal.name}
           onChange={handleInputsOnChange}
         />
 
@@ -32,7 +33,8 @@ const FooterTopFeedbackModalContentForm = () => {
         <input
           type="text"
           placeholder="Например: +7 (928) 123-45-67"
-          name={inputsVal.number}
+          name="number"
+          value={inputsVal.number}
           onChange={handleInputsOnChange}
         />
 
@@ -40,7 +42,8 @@ const FooterTopFeedbackModalContentForm = () => {
         <input
           type="text"
           placeholder="Например: Фирма АС"
-          name={inputsVal.organizations}
+          name="organizations"
+          value={inputsVal.organizations}
           onChange={handleInputsOnChange}
         />
 
@@ -58,7 +61,8 @@ const FooterTopFeedbackModalContentForm = () => {
         <p>Комментарий</p>
         <textarea
           placeholder="Начните писать здесь"
-          name={inputsVal.comment}
+          name="comment"
+          value={inputsVal.comment}
           onChange={handleInputsOnChange}
         ></textarea>
 
