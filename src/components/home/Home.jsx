@@ -13,6 +13,9 @@ const Home = () => {
       <MyBusiness />
       <Services />
       <DigitalPlatform />
+      <SuccessStory />
+      <SearchSite />
+      <Faq />
     </div>
   );
 };

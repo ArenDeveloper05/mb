@@ -1,0 +1,12 @@
+.news {
+  background-color: green;
+
+  &-left-side {
+    width: 60%;
+    border: solid;
+
+    &-list {
+      border: solid white;
+    }
+  }
+}
