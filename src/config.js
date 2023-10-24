@@ -187,3 +187,34 @@ export const footerConfig = {
     },
   ],
 };
+
+export const faqConfig = [
+  {
+    id: 1,
+    title: "Хочу открыть свой бизнес. Как это сделать?",
+    description: "lorem",
+    open: false,
+    close: false,
+  },
+  {
+    id: 2,
+    title: "Хочу развивать свой бизнес. Как это сделать?",
+    description: "lorem",
+    open: false,
+    close: false,
+  },
+  {
+    id: 3,
+    title: "Как продавать на экспорт. Вы можете мне помочь?",
+    description: "lorem",
+    open: false,
+    close: false,
+  },
+  {
+    id: 4,
+    title: "Как я могу воспользоваться услугами Центра?",
+    description: "lorem",
+    open: false,
+    close: false,
+  },
+];

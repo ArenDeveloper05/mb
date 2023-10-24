@@ -45,7 +45,7 @@ const Header = () => {
           </div>
         </div>
       </Container>
-      {/* <Menu open={menuOpen} /> */}
+      <Menu open={menuOpen} />
     </header>
   );
 };
