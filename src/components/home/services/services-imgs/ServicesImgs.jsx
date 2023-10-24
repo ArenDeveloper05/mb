@@ -1,10 +1,10 @@
-// import services_img from "../../../../assets/images/icon-service.svg";
+import servicesImg from "../../../../assets/icons/service-logo.png";
 
 const ServicesImgs = () => {
   return (
     <div className="home-services-imgs">
       <img
-        src="{services_img}"
+        src={servicesImg}
         alt="Services_icon"
         className="home-services-imgs-img"
       />

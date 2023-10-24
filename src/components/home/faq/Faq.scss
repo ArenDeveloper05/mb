@@ -1,6 +1,6 @@
 .faq {
-  font-family: "Circe", sans-serif;
-  margin-top: 30px;
+  font-family: var(--global-ff);
+  margin-top: 70px;
   margin-bottom: 70px;
   > h1 {
     color: var(--footer-color);
@@ -29,6 +29,7 @@
         padding: 16px 24px;
         padding-right: 0;
         margin-bottom: 24px;
+        cursor: pointer;
         &-icon {
           > svg {
             font-size: 40px;
@@ -38,6 +39,9 @@
       }
       &-description {
         padding: 8px 24px;
+        height: 250px;
+        overflow: auto;
+        padding-left: 60px;
       }
       .faq-footer {
         border-top: 1px solid #c39367;
@@ -64,20 +68,15 @@
 
 .faq-open {
   animation-name: faq-open;
-  //   animation-duration: 0.5s;
-  //   animation-fill-mode: forwards;
-  //   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .faq-close {
   animation-name: faq-close;
-  //   animation-duration: 0.5s;
-  //   animation-fill-mode: forwards;
 }
 
 @keyframes faq-open {
   100% {
-    height: 220px;
+    height: 430px;
   }
 }
 

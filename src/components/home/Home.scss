@@ -3,24 +3,26 @@
     display: flex;
     border-radius: 5px;
     background-color: #cd9b6a;
-
+    font-family: var(--global-ff);
+    padding-top: 10px;
+    padding-bottom: 40px;
     &-desc {
-      width: 50%;
+      width: 70%;
       padding-left: 40px;
       display: flex;
       align-items: flex-start;
       flex-direction: column;
-      justify-content: center;
+      justify-content: end;
 
       &-title {
         color: white;
-        font-size: 38px;
+        font-size: 60px;
+        font-weight: 600;
       }
 
       &-txt {
         opacity: 0.8;
         font-size: 17px;
-        margin-top: 30px;
         color: #fff;
       }
     }
@@ -67,31 +69,33 @@
 
   &-services {
     display: flex;
+    justify-content: space-between;
     margin-top: 30px;
     border-radius: 5px;
     align-items: center;
     background-color: #cd9b6a;
-
+    padding: 40px 0;
+    padding-right: 24px;
+    font-family: var(--global-ff);
     &-desc {
       min-height: 300px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-end;
-      padding: 40px;
+      padding: 40px 60px 0 40px;
 
       &-title {
-        opacity: 0.8;
         color: white;
-        font-size: 38px;
+        font-size: 60px;
         font-weight: bold;
-        margin-bottom: 30px;
       }
 
       &-txt {
         opacity: 0.8;
         color: white;
         margin-bottom: 10px;
+        font-size: 19px;
       }
 
       &-btn {
@@ -106,11 +110,6 @@
           font-size: 18px;
         }
       }
-    }
-
-    &-imgs {
-      flex-grow: 1;
-      background-color: blue;
     }
   }
 

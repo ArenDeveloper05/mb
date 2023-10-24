@@ -19,6 +19,7 @@ button {
   --body-color: #f9f9f9;
   --header-color: #fff;
   --footer-color: #623b2a;
+  --global-ff: "Circe", sans-serif;
 }
 
 body {

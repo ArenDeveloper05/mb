@@ -1,7 +1,6 @@
 import { useState } from "react";
 import FooterTopFeedbackDesc from "./footer-top-feedback-desc/FooterTopFeedbackDesc";
-import FooterTopFeedbackModal from "./footer-top-feedback-modal/FooterTopFeedbackModal";
-
+import FeedbackModal from "../../../common/feedback-modal/FeedbackModal";
 const FooterTopFeedback = () => {
   const [openModal, setOpenModal] = useState(false);
 
@@ -17,7 +16,7 @@ const FooterTopFeedback = () => {
         Обратная связь
       </button>
 
-      {openModal && <FooterTopFeedbackModal setOpenModal={setOpenModal} />}
+      {openModal && <FeedbackModal setOpenModal={setOpenModal} />}
     </div>
   );
 };
