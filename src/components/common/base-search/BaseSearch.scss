@@ -1,0 +1,39 @@
+.base-search-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-input {
+    width: 94%;
+    height: 46px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: rgba(0, 0, 0, 1);
+    border: 1px solid #623b2a;
+    background-color: #ffffff;
+  }
+
+  &-btn {
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    background: #623b2a;
+    border: 1px solid #623b2a;
+
+    &:hover {
+      background-color: #553324;
+      border: 1px solid #553324;
+    }
+
+    &-icon {
+      color: white;
+      font-size: 24px;
+    }
+  }
+}

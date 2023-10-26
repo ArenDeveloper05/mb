@@ -1,0 +1,182 @@
+.news-right-side {
+  flex: 1;
+
+  &-form {
+  }
+
+  &-latest-news {
+    margin-top: 20px;
+
+    &-title {
+      font-size: 24px;
+      color: #2c2a29;
+    }
+
+    &-list {
+      margin-top: 20px;
+      list-style-type: none;
+
+      &-item {
+        padding: 0px 0px 12px 0px;
+        margin: 0 0 12px 0;
+        border-bottom: 1px solid #dedede;
+
+        > a {
+          font-size: 17px;
+          color: #c39367;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &-events {
+    &-search {
+      background-color: red;
+
+      > input {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px 15px;
+        border-radius: 5px;
+        outline: none;
+        border: solid 2px #202124;
+        background-color: #ffffff;
+      }
+    }
+
+    &-btns {
+      &-title {
+        color: #202124;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      &-prnt {
+        display: flex;
+        margin-top: 20px;
+
+        :not(:first-child) {
+          margin-left: 10px;
+        }
+
+        &-btn {
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          outline: none;
+          border-radius: 50%;
+          border: solid 1px #656565;
+          background-color: white;
+
+          &:hover {
+            color: rgb(221, 221, 221);
+            background-color: rgb(221, 221, 221);
+            border: solid 1px rgb(221, 221, 221);
+          }
+        }
+      }
+    }
+
+    &-list {
+      list-style-type: none;
+
+      &-item {
+        margin-top: 10px;
+
+        &-date {
+          padding: 15px;
+          padding-bottom: 40px;
+          color: white;
+          cursor: pointer;
+          border-radius: 8px 8px 0 0;
+          background-color: #daad82;
+
+          &-day {
+            font-weight: bold;
+            transition: 250ms;
+          }
+
+          &-month {
+            font-size: 10px;
+            transition: 250ms;
+          }
+
+          &-title {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 0;
+            transition: 250ms;
+
+            border-bottom: 1px solid #fff;
+          }
+
+          &:hover &-day {
+            margin-left: 10px;
+          }
+
+          &:hover &-month {
+            margin-left: 10px;
+          }
+
+          &:hover &-title {
+            margin-left: 10px;
+          }
+        }
+
+        &-desc {
+          min-height: 260px;
+          padding: 15px;
+          border-radius: 0 0 8px 8px;
+          background-color: white;
+
+          &-title {
+            color: #202124;
+            font-weight: bold;
+            font-size: 16px;
+          }
+
+          &-date {
+            margin-top: 50px;
+
+            &-title {
+              color: #202124;
+              font-weight: bold;
+              font-size: 16px;
+            }
+
+            &-txt {
+              font-size: 10px;
+              color: #656565;
+              margin-top: 10px;
+            }
+          }
+
+          &-links {
+            margin-top: 30px;
+
+            > a {
+              font-size: 14px;
+              color: #656565;
+
+              &:hover {
+                opacity: 0.6;
+              }
+            }
+
+            :not(:first-child) {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

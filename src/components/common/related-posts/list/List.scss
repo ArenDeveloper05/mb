@@ -1,0 +1,57 @@
+.list {
+  list-style-type: none;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+
+  &-item {
+    width: 300px;
+    min-height: 450px;
+    cursor: pointer;
+    border: solid white;
+
+    &-images {
+      width: 100%;
+
+      > img {
+        width: 100%;
+      }
+    }
+
+    &-desc {
+      &-date {
+        font-size: 10px;
+        color: #623b2a;
+      }
+
+      &-txt {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+
+      &-btn {
+        border: none;
+        outline: none;
+        color: #c39367;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        background-color: white;
+
+        > svg {
+          margin-left: 10px;
+          transition: 250ms;
+        }
+      }
+    }
+
+    &:hover > &-images > img {
+      opacity: 0.8;
+    }
+
+    &:hover > &-desc > button > svg {
+      margin-left: 20px;
+    }
+  }
+}

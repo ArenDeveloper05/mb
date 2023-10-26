@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BiSearch } from "react-icons/bi";
+import BaseSearch from "../../common/base-search/BaseSearch";
 
 const SearchSite = () => {
   const [search, setSearch] = useState("");
@@ -10,19 +10,7 @@ const SearchSite = () => {
 
   return (
     <div className="home-search-site">
-      <form className="home-search-site-form">
-        <input
-          type="text"
-          placeholder="Поиск по сайту"
-          className="home-search-site-form-input"
-          value={search}
-          onChange={handleSearchInput}
-        />
-
-        <button className="home-search-site-form-btn">
-          <BiSearch className="home-search-site-form-btn-icon" />
-        </button>
-      </form>
+      <BaseSearch value={search} handleInputOnchange={handleSearchInput} />
     </div>
   );
 };
