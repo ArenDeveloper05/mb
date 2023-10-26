@@ -6,7 +6,7 @@ import logo from "../../assets/images/logo.png";
 import { useNavigate } from "react-router-dom";
 import { ROUTER } from "../../router/router";
 import { useState } from "react";
-import Menu from "../menu/Menu";
+// import Menu from "../menu/Menu";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -45,7 +45,7 @@ const Header = () => {
           </div>
         </div>
       </Container>
-      <Menu open={menuOpen} />
+      {/* <Menu open={menuOpen} /> */}
     </header>
   );
 };
