@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ROUTER } from "../../../../router/router";
 
 const HomeServicesSectionItem = ({ item }) => {
   return (
@@ -8,7 +9,10 @@ const HomeServicesSectionItem = ({ item }) => {
         src={item.img}
         alt=""
       />
-      <Link className="home-services-section-servicesContainer-item-link" to="">
+      <Link
+        className="home-services-section-servicesContainer-item-link"
+        to={`${ROUTER.SERVICES_PAGE_ROUTE}?id=${item.id ? item.id : 1}`}
+      >
         {item.title}
       </Link>
     </div>

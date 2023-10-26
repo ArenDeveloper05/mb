@@ -1,0 +1,39 @@
+.services {
+  display: flex;
+  margin-bottom: 30px;
+  &-list {
+    width: 32%;
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &-item {
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      background-color: var(--header-color);
+      box-shadow: 0px 0px 10px #d8d8d8;
+      height: 70px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: var(--global-ff);
+      &:hover {
+        border: 1px solid #a2662e;
+        color: #a2662e;
+      }
+      &-icon {
+        height: 50px;
+        min-width: 50px;
+        margin-right: 6px;
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &-component {
+    flex-grow: 1;
+  }
+}

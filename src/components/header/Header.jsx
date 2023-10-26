@@ -6,7 +6,9 @@ import logo from "../../assets/images/logo.png";
 import { useNavigate } from "react-router-dom";
 import { ROUTER } from "../../router/router";
 import { useState } from "react";
-// import Menu from "../menu/Menu";
+import Menu from "../menu/Menu";
+import FeedbackButton from "./feedback-button/FeedbackButton";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -23,7 +25,7 @@ const Header = () => {
                 setMenuOpen((prev) => !prev);
               }}
             >
-              <BiMenuAltLeft />
+              {menuOpen ? <AiOutlineClose /> : <BiMenuAltLeft />}
             </div>
             <div
               className="logo"
@@ -41,11 +43,11 @@ const Header = () => {
               </div>
               <span>8 (800) 700 99 00</span>
             </a>
-            <button>Обратная связь</button>
+            <FeedbackButton />
           </div>
         </div>
       </Container>
-      {/* <Menu open={menuOpen} /> */}
+      <Menu open={menuOpen} />
     </header>
   );
 };

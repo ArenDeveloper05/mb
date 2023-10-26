@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomeServicesSection.scss";
-import { servicesConfig } from "../../../config";
+import { homeServicesConfig } from "../../../config";
 import HomeServicesSectionItem from "./home-services-section-item/HomeServicesSectionItem";
 
 // =======
@@ -14,7 +14,7 @@ const HomeServicesSection = () => {
     <section className="home-services-section">
       <h1>Предоставляемые услуги</h1>
       <div className="home-services-section-servicesContainer">
-        {servicesConfig.map((item) => {
+        {homeServicesConfig.map((item) => {
           return <HomeServicesSectionItem item={item} key={item.id} />;
         })}
       </div>
