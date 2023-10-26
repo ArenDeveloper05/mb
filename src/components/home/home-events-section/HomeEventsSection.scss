@@ -1,0 +1,147 @@
+.home-events-section {
+  width: var(--global-max-width);
+  height: auto;
+  // border: 1px solid red;
+  margin: auto;
+  padding: 50px 0px 60px;
+
+  &-head {
+    width: 100%;
+    height: 83px;
+    border: inherit;
+    display: flex;
+    justify-content: space-between;
+
+    & > h1 {
+      font-family: Circe;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 1;
+      text-align: left;
+      color: #623b2a;
+      margin: 0;
+    }
+
+    &-form {
+      &-button {
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 400;
+        text-align: center;
+        color: #c39367;
+        padding: 8px 30px;
+        border: solid 2px #daac82;
+        border-radius: 4px;
+        background: 0 0;
+        outline: none;
+
+        &:hover {
+          background-color: #c3946725;
+        }
+      }
+    }
+  }
+
+  & > form {
+    .home-events-section-searchInput {
+      width: 100%;
+      padding: 12px 15px !important;
+      border-radius: 5px !important;
+      border: 2px solid #202124;
+      background-color: #ffffff;
+      font: 14px arial;
+      line-height: normal;
+      outline: none;
+      margin-bottom: 30px !important;
+      margin-top: 5px;
+    }
+  }
+
+  & > h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    min-height: 24px;
+    line-height: 100%;
+    margin: 0;
+    color: #202124;
+    font-weight: 800;
+    padding: 8px 0 5px;
+  }
+  &-mounthEvents {
+    width: 100%;
+    height: 200px;
+    border: inherit;
+    margin-bottom: 25px;
+    display: flex;
+
+    &-outter {
+      width: 370px;
+      height: 200px;
+      border: inherit;
+      background-color: #ca9462;
+      overflow: hidden;
+      border-radius: 10px;
+
+      & > a {
+        cursor: pointer;
+        & > .home-events-section-mounthEvents-item {
+          width: 370px;
+          height: 200px;
+          background-color: #daad82;
+          border: inherit;
+          padding: 20px;
+          display: flex;
+          position: relative;
+          left: 0;
+          transition: 0.3s;
+
+          &:hover {
+            left: 5px;
+          }
+
+          & > .home-events-section-mounthEvents-item-date {
+            width: 65px;
+            height: auto;
+            // border: 1px solid red;
+
+            & > p {
+              font-family: "Montserrat", sans-serif;
+              color: #fff;
+              text-transform: uppercase;
+              line-height: 100%;
+              font-size: 30px;
+              font-weight: 800;
+            }
+
+            & > span {
+              font-family: "Montserrat", sans-serif;
+              font-size: 11px;
+              font-weight: normal;
+              color: #fff;
+              text-transform: uppercase;
+              margin-top: -30px;
+            }
+          }
+
+          & > .home-events-section-mounthEvents-item-title {
+            width: 250px;
+            height: auto;
+            // border: 1px solid red;
+            margin-left: 10px;
+
+            & > p {
+              font-family: "Montserrat", sans-serif;
+              color: #fff;
+              text-transform: uppercase;
+              // line-height: 110%;
+              font-size: 20px;
+              font-weight: 800;
+              word-wrap: break-word;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.home-news-section {
+  width: var(--global-max-width);
+  height: auto;
+  // border: 1px solid red;
+  padding: 30px 0px 70px;
+  margin: auto;
+
+  &-top {
+    width: 100%;
+    height: 80px;
+    border: inherit;
+    // padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & > h1 {
+      font-family: Circe;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 1;
+      text-align: left;
+      color: #623b2a;
+    }
+
+    & > form {
+      & > button {
+        padding: 8px 30px;
+        border: solid 2px #daac82;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 16px;
+        line-height: 25px;
+        color: #c39367;
+        transition: 0.1s;
+        font-weight: 400;
+        text-align: center;
+
+        &:hover {
+          background-color: #c3946725;
+        }
+      }
+    }
+  }
+
+  &-container {
+    width: 100%;
+    height: auto;
+    border: inherit;
+    display: flex;
+
+    &-item {
+      width: 380px;
+      height: auto;
+      border: inherit;
+      // padding: 0px 15px;
+
+      &-img {
+        width: 100%;
+        height: 230px;
+        transition: 0.5s;
+      }
+
+      &-dateCategoryBox {
+        width: 100%;
+        height: auto;
+        border: inherit;
+        margin: 5px;
+
+        & > span {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: 10px;
+          color: #623b2a;
+          margin: 5px 0;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          margin-right: 5px;
+        }
+      }
+
+      &-title {
+        font-family: Circe;
+        margin-bottom: 0.5rem;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #000;
+      }
+
+      &-readMore {
+        width: 100%;
+        height: auto;
+        border: inherit;
+        display: flex;
+        gap: 5px;
+
+        & > p {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5;
+          color: #212529;
+          text-align: left;
+          color: #c39367;
+        }
+
+        & > img {
+          width: 22px;
+          height: 22px;
+          position: relative;
+          left: 0;
+          transition: 0.5s;
+        }
+      }
+
+      &:hover &-img {
+        filter: brightness(1.05);
+      }
+
+      &:hover .arrow {
+        left: 15px;
+      }
+    }
+  }
+}

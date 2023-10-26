@@ -2,7 +2,7 @@ import "./Modes.scss";
 import coronaImg from "../../../assets/images/corona_img_bg.png";
 
 const Modes = () => {
-  return (
+  return (  
     <div className="modes">
       <div className="modes-mode self-employed">
         <p>Режим самозанятых</p>

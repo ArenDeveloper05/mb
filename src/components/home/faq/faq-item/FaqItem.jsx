@@ -1,5 +1,6 @@
-import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import FaqItemFooter from "./faq-item-footer/FaqItemFooter";
+import parse from "html-react-parser";
 
 const FaqItem = ({ item, changeActive }) => {
   return (
@@ -14,10 +15,17 @@ const FaqItem = ({ item, changeActive }) => {
       <div className="faq-list-item-title">
         {item.title}
         <div className="faq-list-item-title-icon">
-          <MdKeyboardArrowUp />
+          <MdKeyboardArrowDown
+            style={{
+              transition: "0.25s",
+              transform: `rotate(${item.open ? "180deg" : "0deg"})`,
+            }}
+          />
         </div>
       </div>
-      <div className={`faq-list-item-description `}>{item.description}</div>
+      <div className={`faq-list-item-description `}>
+        {item.description ? parse(item.description) : ""}
+      </div>
       <FaqItemFooter />
     </li>
   );

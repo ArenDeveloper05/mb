@@ -11,6 +11,28 @@ const Menu = ({ open }) => {
     firstRender.current = false;
   }, []);
 
+  useEffect((e) => {
+    let scrollBefore = 0;
+    function handleScroll(e) {
+      const scrolled = window.scrollY;
+      if (open) {
+        if (scrollBefore > scrolled) {
+          scrollBefore = scrolled;
+        } else {
+          scrollBefore = scrolled;
+          if (scrolled > 100) {
+            window.scrollTo({ top: 100 });
+          }
+        }
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   return (
     <section
       className={`menu ${
