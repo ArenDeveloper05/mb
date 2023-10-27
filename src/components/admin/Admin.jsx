@@ -11,7 +11,7 @@ const Admin = () => {
           return (
             <div
               className="field"
-              key={1}
+              key={id}
               style={{ border: active === id ? "solid" : "none" }}
               onClick={() => {
                 if (id !== active) {

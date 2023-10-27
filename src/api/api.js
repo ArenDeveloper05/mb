@@ -19,3 +19,8 @@ export const getNews = async (limit) => {
 export const getEvents = async (limit) => {
   return await api.get(`/event/${limit}`);
 };
+
+// POST
+export const addNews = async (data) => {
+  return await api.post(`/news`, data);
+};

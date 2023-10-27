@@ -1,24 +1,16 @@
-import { useEffect, useState } from "react";
-import { getEvents, getNews } from "../../../api/api";
+import { getEvents } from "../../../api/api";
 import AdminTable from "../admin-table/AdminTable";
+import useFetchData from "../../../hooks/useFetchData";
 
 const EventsAdmin = () => {
-  const [eventsData, setEventsData] = useState([]);
-  useEffect(() => {
-    async function getData() {
-      try {
-        const { data } = await getEvents(10);
-        setEventsData(data.data);
-      } catch (err) {
-        console.log(err.message);
-      }
-    }
-    getData();
-  }, []);
+  const { result, loading, error } = useFetchData(getEvents, 10);
+
   return (
-    <div>
-      <AdminTable data={eventsData} />
-    </div>
+    <>
+      {loading && <h1>Loading...</h1>}
+      {error && <h1>Error</h1>}
+      {result && !loading && !error && <AdminTable data={result.data} />}
+    </>
   );
 };
 
