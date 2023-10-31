@@ -1,5 +1,6 @@
 export const ROUTER = {
   HOME_PAGE_ROUTE: "/",
+  ABOUT_PAGE_ROUTE: "/about",
   NEWS_PAGE_ROUTE: "/news",
   NEWS_SINGLE_PAGE_ROUTE: "/news/:id", //
   STATE_SUPPORT_PAGE_ROUTE: "/state_support", //

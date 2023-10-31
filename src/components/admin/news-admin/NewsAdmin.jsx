@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from "react";
 import { getNews } from "../../../api/api";
+import { NewsAdminAdd } from "./news-admin-add/NewsAdminAdd";
 import AdminTable from "../admin-table/AdminTable";
-const NewsAdmin = () => {
-  const [newsData, setNewsData] = useState([]);
+import useFetchData from "../../../hooks/useFetchData";
 
-  useEffect(() => {
-    async function getData() {
-      try {
-        const { data } = await getNews(10);
-        setNewsData(data.data);
-      } catch (err) {
-        console.log(err.message);
-      }
-    }
-    getData();
-  }, []);
+const NewsAdmin = () => {
+  const { result, loading, error } = useFetchData(getNews, 10);
+
   return (
     <>
-      <AdminTable data={newsData} />
+      {loading && <h1>Loading...</h1>}
+      {error && <h1>Error</h1>}
+      {!loading && !error && result && <AdminTable data={result.data} />}
+      <NewsAdminAdd />
     </>
   );
 };
