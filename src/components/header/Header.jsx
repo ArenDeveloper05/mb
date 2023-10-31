@@ -37,7 +37,7 @@ const Header = () => {
             </div>
           </div>
           <div className="header-inner-right">
-            <a href="">
+            <a>
               <div className="tel-icon">
                 <BsTelephone />
               </div>
