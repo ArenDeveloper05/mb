@@ -1,11 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import NavLinksLinkIcons from "./nav-links-link-icons/NavLinksLinkIcons";
 
 const NavLinksLink = ({ item }) => {
-  return (
-    <li className="nav-links-link">
-      <NavLinksLinkIcons item={item} />
+  const navigate = useNavigate();
 
-      <a href={item.url}>{item.title}</a>
+  return (
+    <li
+      className="nav-links-link"
+      onClick={() => {
+        navigate(item.url);
+      }}
+    >
+      <NavLinksLinkIcons item={item} />
+      <p>{item.title}</p>
     </li>
   );
 };

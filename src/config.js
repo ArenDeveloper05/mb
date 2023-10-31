@@ -1,7 +1,7 @@
 import { BsShield } from "react-icons/bs";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
 import { BiMicrophone } from "react-icons/bi";
-import { FcAbout } from "react-icons/fc";
+import { LiaInfoSolid } from "react-icons/lia";
 import { IoLocationOutline } from "react-icons/io5";
 
 import { HiOutlineLocationMarker } from "react-icons/hi";
@@ -50,6 +50,7 @@ import newsImg2 from "./assets/images/newsImg2.jpg";
 import newsImg3 from "./assets/images/newsImg3.png";
 
 import Regional from "./components/services/regional/Regional";
+import { ROUTER } from "./router/router";
 
 export const menuConfig = [
   {
@@ -165,8 +166,8 @@ export const menuConfig = [
 export const navConfig = [
   { id: 1, icon: BsShield, title: "Меры господдержки", url: "#" },
   { id: 2, icon: HiOutlineSpeakerphone, title: "Мероприятия", url: "#" },
-  { id: 3, icon: BiMicrophone, title: "Новости", url: "#" },
-  { id: 4, icon: FcAbout, title: "О нас", url: "#" },
+  { id: 3, icon: BiMicrophone, title: "Новости", url: ROUTER.NEWS_PAGE_ROUTE },
+  { id: 4, icon: LiaInfoSolid, title: "О нас", url: ROUTER.ABOUT_PAGE_ROUTE },
   { id: 5, icon: IoLocationOutline, title: "Контакты", url: "#" },
 ];
 
