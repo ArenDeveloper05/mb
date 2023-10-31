@@ -164,7 +164,12 @@ export const menuConfig = [
 ];
 
 export const navConfig = [
-  { id: 1, icon: BsShield, title: "Меры господдержки", url: "#" },
+  {
+    id: 1,
+    icon: BsShield,
+    title: "Меры господдержки",
+    url: ROUTER.STATE_SUPPORT_PAGE_ROUTE,
+  },
   { id: 2, icon: HiOutlineSpeakerphone, title: "Мероприятия", url: "#" },
   { id: 3, icon: BiMicrophone, title: "Новости", url: ROUTER.NEWS_PAGE_ROUTE },
   { id: 4, icon: LiaInfoSolid, title: "О нас", url: ROUTER.ABOUT_PAGE_ROUTE },

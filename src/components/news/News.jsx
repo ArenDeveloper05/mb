@@ -5,7 +5,7 @@ import NewsLeftSide from "./news-left-side/NewsLeftSide";
 const News = () => {
   return (
     <div className="news">
-      <NewsLayout>
+      <NewsLayout isHidden={false}>
         <NewsLeftSide />
       </NewsLayout>
     </div>

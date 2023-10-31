@@ -3,7 +3,7 @@ import RelatedPosts from "../components/common/related-posts/RelatedPosts";
 import NewsRightSide from "../components/news/news-right-side/NewsRightSide";
 import news_img_1 from "../assets/images/news-img-1.jpg";
 
-const NewsLayout = ({ children }) => {
+const NewsLayout = ({ children, isHidden }) => {
   const [list] = useState([
     {
       id: 1,
@@ -37,7 +37,7 @@ const NewsLayout = ({ children }) => {
       </section>
 
       {/*  */}
-      <RelatedPosts title="Похожие записи" list={list} />
+      {isHidden && <RelatedPosts title="Похожие записи" list={list} />}
     </div>
   );
 };
