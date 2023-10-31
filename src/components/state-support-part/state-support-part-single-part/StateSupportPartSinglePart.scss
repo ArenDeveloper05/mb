@@ -1,0 +1,28 @@
+.state-support-single-page {
+  &-images {
+    height: 400px;
+
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-desc {
+    &-date {
+      font-size: 13px;
+      color: #737373;
+      margin-top: 10px;
+    }
+
+    &-txt {
+      margin-top: 10px;
+    }
+
+    &-img {
+      width: 80%;
+      height: 400px;
+      margin-top: 10px;
+    }
+  }
+}

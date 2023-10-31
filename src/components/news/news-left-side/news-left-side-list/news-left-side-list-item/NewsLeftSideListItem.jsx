@@ -1,8 +1,16 @@
 import { BsArrowRight } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const NewsLeftSideListItem = ({ item }) => {
+  const navigate = useNavigate();
+
   return (
-    <li className="news-left-side-list-item">
+    <li
+      className="news-left-side-list-item"
+      onClick={() => {
+        navigate(`/news/${item.id}`);
+      }}
+    >
       <div className="news-left-side-list-item-images">
         <img
           src={item.img}

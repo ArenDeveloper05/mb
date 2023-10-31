@@ -30,11 +30,33 @@
         }
 
         &:hover {
-          transform: rotate(360deg);
+          animation-name: rotate_icon;
+          animation-duration: 0.2s;
+          animation-iteration-count: 1;
+          animation-timing-function: linear;
         }
 
         &:hover &-icon {
           font-size: 18px;
+        }
+
+        @keyframes rotate_icon {
+          0% {
+            border: solid 1px #cd9b6a;
+            border-left: solid 1px #f9f9f9;
+          }
+          50% {
+            border: solid 1px #cd9b6a;
+            border-top: solid 1px #f9f9f9;
+          }
+          80% {
+            border: solid 1px #cd9b6a;
+            border-right: solid 1px #f9f9f9;
+          }
+          100% {
+            border: solid 1px #cd9b6a;
+            border-bottom: solid 1px #f9f9f9;
+          }
         }
       }
 

@@ -50,6 +50,7 @@ import newsImg2 from "./assets/images/newsImg2.jpg";
 import newsImg3 from "./assets/images/newsImg3.png";
 
 import Regional from "./components/services/regional/Regional";
+import { ROUTER } from "./router/router";
 
 export const menuConfig = [
   {
@@ -163,7 +164,12 @@ export const menuConfig = [
 ];
 
 export const navConfig = [
-  { id: 1, icon: BsShield, title: "Меры господдержки", url: "#" },
+  {
+    id: 1,
+    icon: BsShield,
+    title: "Меры господдержки",
+    url: ROUTER.STATE_SUPPORT_PAGE_ROUTE,
+  },
   { id: 2, icon: HiOutlineSpeakerphone, title: "Мероприятия", url: "#" },
   { id: 3, icon: BiMicrophone, title: "Новости", url: "#" },
   { id: 4, icon: FcAbout, title: "О нас", url: "#" },
