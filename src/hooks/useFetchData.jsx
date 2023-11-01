@@ -1,16 +1,23 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 
-const useFetchData = (request, limit) => {
+const useFetchData = (request, limit, reduxSettings) => {
+  const dispatch = useDispatch();
+
   const [result, setResult] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
-      setLoading(true);
       try {
         const { data } = await request(limit);
-        setResult(data);
+
+        if (reduxSettings && reduxSettings.redux) {
+          dispatch(reduxSettings.action(data.data));
+        } else {
+          setResult(data);
+        }
       } catch (err) {
         setError(true);
       } finally {

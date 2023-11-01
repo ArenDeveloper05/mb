@@ -32,11 +32,9 @@ const NewsLayout = ({ children, isHidden }) => {
     <div className="news-layout">
       <section style={{ display: "flex" }}>
         <div style={{ flex: 2 }}>{children}</div>
-
         <NewsRightSide />
       </section>
 
-      {/*  */}
       {isHidden && <RelatedPosts title="Похожие записи" list={list} />}
     </div>
   );
