@@ -56,3 +56,21 @@ body {
 .edit-btn {
   background-color: blue;
 }
+
+@media only screen and (max-width: 1200px) {
+  :root {
+    --global-max-width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  :root {
+    --global-max-width: 800px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  :root {
+    --global-max-width: 600px;
+  }
+}

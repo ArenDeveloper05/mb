@@ -6,6 +6,7 @@
     font-family: var(--global-ff);
     padding-top: 10px;
     padding-bottom: 40px;
+
     &-desc {
       width: 70%;
       padding-left: 40px;
@@ -34,37 +35,6 @@
         object-fit: cover;
       }
     }
-
-    @media only screen and (max-width: 990px) {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-
-      &-desc {
-        width: 100%;
-        position: absolute;
-      }
-
-      &-imgs {
-        width: 80%;
-        opacity: 0.5;
-        position: relative;
-      }
-    }
-
-    @media only screen and (max-width: 470px) {
-      &-desc {
-        align-items: center;
-
-        &-title {
-          font-size: 24px;
-        }
-
-        &-txt {
-          font-size: 14px;
-        }
-      }
-    }
   }
 
   &-services {
@@ -77,6 +47,7 @@
     padding: 40px 0;
     padding-right: 24px;
     font-family: var(--global-ff);
+
     &-desc {
       min-height: 300px;
       display: flex;
@@ -110,6 +81,10 @@
           font-size: 18px;
         }
       }
+    }
+
+    &-imgs {
+      margin-left: auto;
     }
   }
 

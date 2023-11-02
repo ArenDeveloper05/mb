@@ -1,0 +1,184 @@
+@media only screen and (max-width: 1000px) {
+  .home-my-business {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .home-my-business-desc {
+      position: absolute;
+      align-items: flex-start;
+    }
+
+    .home-my-business-imgs {
+      width: 100%;
+      opacity: 0.3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+  }
+
+  .home-services {
+    position: relative;
+
+    .home-services-desc {
+      padding: 0;
+      padding-left: 30px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-services-imgs {
+      padding: 0;
+      opacity: 0.3;
+    }
+
+    .home-services-imgs > img {
+      width: 100%;
+    }
+  }
+
+  .home-services-section {
+    .home-services-section-title {
+      font-size: 30px;
+    }
+
+    .home-services-section-servicesContainer {
+      .home-services-section-servicesContainer-item {
+        width: 48%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-my-business {
+    padding: 0px;
+
+    .home-my-business-desc {
+      padding-top: 30px;
+      align-items: center;
+
+      .home-my-business-desc-title {
+        font-size: 34px;
+        text-align: center;
+      }
+
+      .home-my-business-desc-txt {
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+  }
+
+  .home-services {
+    .home-services-desc {
+      .home-services-desc-title {
+        font-size: 34px;
+      }
+
+      .home-services-desc-txt {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .base-search-form > button > svg {
+    font-size: 21.5px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .home-my-business {
+    .home-my-business-desc {
+      padding-left: 30px;
+
+      .home-my-business-desc-title {
+        font-size: 18px;
+      }
+
+      .home-my-business-desc-txt {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .home-services {
+    .home-services-desc {
+      .home-services-desc-title {
+        font-size: 18px;
+      }
+
+      .home-services-desc-txt {
+        font-size: 14px;
+      }
+
+      .home-services-desc-btn {
+        width: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .home-services-desc-btn > a {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .base-search-form {
+    display: none !important;
+  }
+
+  .home-services-section {
+    .home-services-section-title {
+      font-size: 24px;
+    }
+
+    .home-services-section-servicesContainer {
+      .home-services-section-servicesContainer-item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .home-my-business {
+    .home-my-business-desc {
+      .home-my-business-desc-title {
+        font-size: 16px;
+      }
+
+      .home-my-business-desc-txt {
+        font-size: 10px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .home-services {
+    .home-services-desc {
+      .home-services-desc-title {
+        font-size: 16px;
+      }
+
+      .home-services-desc-txt {
+        font-size: 11px;
+      }
+
+      .home-services-desc-btn {
+        width: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .home-services-desc-btn > a {
+        font-size: 12px;
+      }
+    }
+  }
+}
