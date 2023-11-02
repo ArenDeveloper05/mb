@@ -175,7 +175,12 @@ export const navConfig = [
   { id: 2, icon: HiOutlineSpeakerphone, title: "Мероприятия", url: "#" },
   { id: 3, icon: BiMicrophone, title: "Новости", url: ROUTER.NEWS_PAGE_ROUTE },
   { id: 4, icon: LiaInfoSolid, title: "О нас", url: ROUTER.ABOUT_PAGE_ROUTE },
-  { id: 5, icon: IoLocationOutline, title: "Контакты", url: "#" },
+  {
+    id: 5,
+    icon: IoLocationOutline,
+    title: "Контакты",
+    url: ROUTER.CONTACTS_PAGE_ROUTE,
+  },
 ];
 
 export const footerConfig = {
