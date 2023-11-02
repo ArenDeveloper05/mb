@@ -4,8 +4,6 @@ const NewsLeftSide = () => {
   return (
     <div className="news-left-side">
       <NewsLeftSideList />
-
-      {/* Pagination */}
     </div>
   );
 };

@@ -1,0 +1,38 @@
+.news-single {
+  padding-right: 30px;
+
+  &-images {
+    height: 400px;
+
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-desc {
+    > p {
+      margin-top: 10px;
+    }
+
+    > a {
+      margin-top: 100px;
+    }
+
+    &-date {
+      font-size: 14px;
+      color: #737373;
+    }
+
+    &-txt {
+      color: #2c2a29;
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    &-link {
+      text-decoration: underline;
+    }
+  }
+}

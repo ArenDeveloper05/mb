@@ -1,19 +1,13 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Container from "../common/container/Container";
 import "./Menu.scss";
 import { menuConfig } from "../../config";
 import MenuItem from "./menu-item/MenuItem";
 
-const Menu = ({ open }) => {
-  const firstRender = useRef(true);
-
+const Menu = ({ open, render }) => {
   useEffect(() => {
-    firstRender.current = false;
-  }, []);
-
-  useEffect((e) => {
     let scrollBefore = 0;
-    function handleScroll(e) {
+    function handleScroll() {
       const scrolled = window.scrollY;
       if (open) {
         if (scrollBefore > scrolled) {
@@ -35,9 +29,7 @@ const Menu = ({ open }) => {
 
   return (
     <section
-      className={`menu ${
-        open ? "menu-open" : firstRender.current ? "" : "menu-close"
-      }`}
+      className={`menu ${open ? "menu-open" : render ? "" : "menu-close"}`}
     >
       <Container>
         <div

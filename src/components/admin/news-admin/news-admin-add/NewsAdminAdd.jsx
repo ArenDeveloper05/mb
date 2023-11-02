@@ -2,13 +2,22 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 import "./NewsAdminAdd.scss";
-import { addNews } from "../../../../api/api";
+import { addNews, getNews } from "../../../../api/api";
+import { useDispatch } from "react-redux";
+import { changeNewsDataAdmin } from "../../../../redux/slices/adminSlice";
 
-export const NewsAdminAdd = (values) => {
-  const addNewsFunction = async () => {
+export const NewsAdminAdd = () => {
+  const dispatch = useDispatch();
+
+  const addNewsFunction = async (values) => {
     try {
-      await addNews(values);
-    } catch (error) {}
+      const res = await addNews(values);
+      const newsData = await getNews(10);
+      dispatch(changeNewsDataAdmin(newsData.data.data));
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div className="news-add-form">
@@ -19,9 +28,9 @@ export const NewsAdminAdd = (values) => {
           description: Yup.string().required("Required"),
           image: Yup.string().required("Required"),
         })}
-        onSubmit={(values, { setSubmitting }) => {
-          console.log(values);
+        onSubmit={(values, { resetForm }) => {
           addNewsFunction(values);
+          resetForm("");
         }}
       >
         <Form>

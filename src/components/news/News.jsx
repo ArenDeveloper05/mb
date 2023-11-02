@@ -1,11 +1,12 @@
 import NewsLayout from "../../layout/NewsLayout";
-import "./News.scss";
 import NewsLeftSide from "./news-left-side/NewsLeftSide";
+
+import "./News.scss";
 
 const News = () => {
   return (
     <div className="news">
-      <NewsLayout>
+      <NewsLayout isHidden={false}>
         <NewsLeftSide />
       </NewsLayout>
     </div>
