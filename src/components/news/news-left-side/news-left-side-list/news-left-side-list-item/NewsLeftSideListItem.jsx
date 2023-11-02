@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 const NewsLeftSideListItem = ({ item }) => {
   const navigate = useNavigate();
 
-  console.log(item);
   return (
     <li
       className="news-left-side-list-item"

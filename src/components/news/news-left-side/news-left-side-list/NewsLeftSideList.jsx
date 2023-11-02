@@ -5,7 +5,7 @@ import { getNews } from "../../../../api/api";
 import { changeNewsData } from "../../../../redux/slices/newsSlice";
 
 const NewsLeftSideList = () => {
-  const { result, error, loading } = useFetchData(getNews, 10, {
+  const { error, loading } = useFetchData(getNews, 10, {
     redux: true,
     action: changeNewsData,
   });
@@ -13,7 +13,10 @@ const NewsLeftSideList = () => {
 
   return (
     <ul className="news-left-side-list">
+      {loading && <h1>Loading...</h1>}
       {newsList &&
+        !loading &&
+        !error &&
         newsList.map((item) => {
           return <NewsLeftSideListItem key={item.id} item={item} />;
         })}
