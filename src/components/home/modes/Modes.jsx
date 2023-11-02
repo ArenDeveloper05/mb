@@ -11,6 +11,7 @@ const Modes = () => {
       <div className="modes-mode self-employed">
         <p>Режим самозанятых</p>
       </div>
+
       <div
         className="modes-mode antikrizis"
         onClick={() => {

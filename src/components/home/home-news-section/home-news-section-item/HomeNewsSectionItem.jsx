@@ -4,11 +4,9 @@ import arrow from "../../../../assets/images/arrow.png";
 const HomeNewsSectionItem = ({ item }) => {
   return (
     <Link className="home-news-section-container-item">
-      <img
-        className="home-news-section-container-item-img"
-        src={item.img}
-        alt="img"
-      />
+      <div className="home-news-section-container-item-img">
+        <img src={item.img} alt="img" />
+      </div>
       <div className="home-news-section-container-item-dateCategoryBox">
         <span>{item.date}</span>
         <span>{item.category}</span>
