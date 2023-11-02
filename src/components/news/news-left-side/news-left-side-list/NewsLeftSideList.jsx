@@ -3,6 +3,7 @@ import NewsLeftSideListItem from "./news-left-side-list-item/NewsLeftSideListIte
 import useFetchData from "../../../../hooks/useFetchData";
 import { getNews } from "../../../../api/api";
 import { changeNewsData } from "../../../../redux/slices/newsSlice";
+import Loading from "../../../loading/Loading";
 
 const NewsLeftSideList = () => {
   const { error, loading } = useFetchData(getNews, 10, {
@@ -13,7 +14,7 @@ const NewsLeftSideList = () => {
 
   return (
     <ul className="news-left-side-list">
-      {loading && <h1>Loading...</h1>}
+      {loading && <Loading />}
       {newsList &&
         !loading &&
         !error &&

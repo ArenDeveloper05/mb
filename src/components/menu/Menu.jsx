@@ -4,7 +4,7 @@ import "./Menu.scss";
 import { menuConfig } from "../../config";
 import MenuItem from "./menu-item/MenuItem";
 
-const Menu = ({ open, render }) => {
+const Menu = ({ open, render, setMenuOpen }) => {
   useEffect(() => {
     let scrollBefore = 0;
     function handleScroll() {
@@ -36,9 +36,12 @@ const Menu = ({ open, render }) => {
           className="menu-content"
           style={{ display: open ? "block" : "none" }}
         >
-          {menuConfig.map((item) => {
-            return <MenuItem item={item} key={item.id} />;
-          })}
+          {menuConfig &&
+            menuConfig.map((item) => {
+              return (
+                <MenuItem item={item} key={item.id} setMenuOpen={setMenuOpen} />
+              );
+            })}
         </div>
       </Container>
     </section>

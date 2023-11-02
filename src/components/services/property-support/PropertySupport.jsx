@@ -1,10 +1,15 @@
 import conferenceImg from "../../../assets/images/conference.jpg";
 import covorkingImg from "../../../assets/images/covorking.jpg";
+import negotiation from "../../../assets/images/negotiation.jpg";
 
 import "./PropertySupport.scss";
 
 const PropertySupport = () => {
-  const halls = [{ id: 1, title: "Коворкинг", image: covorkingImg }];
+  const halls = [
+    { id: 1, title: "Коворкинг", image: covorkingImg },
+    { id: 2, title: "Переговорная", image: negotiation },
+    { id: 3, title: "Конференц-зал", image: conferenceImg },
+  ];
   return (
     <div className="property-support">
       <ul>

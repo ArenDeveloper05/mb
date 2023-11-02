@@ -62,7 +62,7 @@ const Header = () => {
           </div>
         </div>
       </Container>
-      <Menu open={menuOpen} render={render} />
+      <Menu open={menuOpen} render={render} setMenuOpen={setMenuOpen} />
     </header>
   );
 };
