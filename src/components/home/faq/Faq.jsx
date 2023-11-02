@@ -25,10 +25,6 @@ const Faq = () => {
     });
   }, []);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
-
   return (
     <div className="faq">
       <h1>Вопрос-ответ FaQ</h1>

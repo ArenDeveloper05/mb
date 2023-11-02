@@ -16,11 +16,26 @@ export const getNews = async (limit) => {
   return await api.get(`/news/${limit}`);
 };
 
+export const getSingleNews = async (id) => {
+  return await api.get(`/news-by-id/${id}`);
+};
+
 export const getEvents = async (limit) => {
   return await api.get(`/event/${limit}`);
 };
 
 // POST
 export const addNews = async (data) => {
-  return await api.post(`/news`, data);
+  return await api.post(`/news-create`, data);
+};
+
+//DELETE
+export const deleteNews = async (id) => {
+  return await api.get(`/news-delete/${id}`);
+};
+
+//PUT
+export const editNews = async (id, data) => {
+  console.log(data);
+  return await api.post(`/news-update/${id}`, data);
 };

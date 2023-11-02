@@ -2,15 +2,21 @@ import { getNews } from "../../../api/api";
 import { NewsAdminAdd } from "./news-admin-add/NewsAdminAdd";
 import AdminTable from "../admin-table/AdminTable";
 import useFetchData from "../../../hooks/useFetchData";
+import { changeNewsDataAdmin } from "../../../redux/slices/adminSlice";
+import { useSelector } from "react-redux";
 
 const NewsAdmin = () => {
-  const { result, loading, error } = useFetchData(getNews, 10);
+  const { loading, error } = useFetchData(getNews, 10, {
+    redux: true,
+    action: changeNewsDataAdmin,
+  });
+  const data = useSelector((store) => store.admin.newsData);
 
   return (
     <>
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error</h1>}
-      {!loading && !error && result && <AdminTable data={result.data} />}
+      {!loading && !error && data && <AdminTable data={data} />}
       <NewsAdminAdd />
     </>
   );

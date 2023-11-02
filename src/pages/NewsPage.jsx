@@ -1,13 +1,16 @@
-import Modes from "../components/home/modes/Modes";
+import PageBanner from "../components/common/page-banner/PageBanner";
 import News from "../components/news/News";
 import Layout from "../layout/Layout";
-import NewsLayout from "../layout/NewsLayout";
 
 const NewsPage = () => {
   return (
     <Layout>
-      <Modes />
-
+      <PageBanner
+        params={{
+          list: [{ id: 1, title: "Новости" }],
+          title: "Новости",
+        }}
+      />
       <News />
     </Layout>
   );

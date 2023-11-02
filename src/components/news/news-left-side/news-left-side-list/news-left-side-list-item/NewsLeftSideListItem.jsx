@@ -13,7 +13,7 @@ const NewsLeftSideListItem = ({ item }) => {
     >
       <div className="news-left-side-list-item-images">
         <img
-          src={item.img}
+          src={item.image}
           alt=""
           className="news-left-side-list-item-images-img"
         />
@@ -28,7 +28,11 @@ const NewsLeftSideListItem = ({ item }) => {
           {item.title}
         </a>
 
-        <p className="news-left-side-list-item-desc-txt">{item.desc}</p>
+        <p className="news-left-side-list-item-desc-txt">
+          {item.description && item.description.length > 200
+            ? item.description.slice(0, 200) + " [...]"
+            : item.description}
+        </p>
 
         <button className="news-left-side-list-item-desc-btn">
           Читать{" "}

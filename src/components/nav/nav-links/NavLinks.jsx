@@ -4,9 +4,10 @@ import NavLinksLink from "./nav-links-link/NavLinksLink";
 const NavLinks = () => {
   return (
     <ul className="nav-links">
-      {navConfig.map((item) => {
-        return <NavLinksLink key={item.id} item={item} />;
-      })}
+      {navConfig &&
+        navConfig.map((item) => {
+          return <NavLinksLink key={item.id} item={item} />;
+        })}
     </ul>
   );
 };

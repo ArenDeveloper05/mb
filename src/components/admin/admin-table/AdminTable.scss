@@ -1,0 +1,12 @@
+table {
+  font-family: var(--global-ff);
+  tr {
+    th,
+    td {
+      padding: 20px;
+      textarea {
+        min-height: 200px;
+      }
+    }
+  }
+}

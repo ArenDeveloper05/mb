@@ -51,6 +51,8 @@ import newsImg3 from "./assets/images/newsImg3.png";
 
 import Regional from "./components/services/regional/Regional";
 import { ROUTER } from "./router/router";
+import SupportMeasures from "./components/services/support-measures/SupportMeasures";
+import PropertySupport from "./components/services/property-support/PropertySupport";
 
 export const menuConfig = [
   {
@@ -176,9 +178,14 @@ export const navConfig = [
     title: "Мероприятия",
     url: ROUTER.EVENTS_PAGE_ROUTE,
   },
-  { id: 3, icon: BiMicrophone, title: "Новости", url: "#" },
-  { id: 4, icon: FcAbout, title: "О нас", url: "#" },
-  { id: 5, icon: IoLocationOutline, title: "Контакты", url: "#" },
+  { id: 3, icon: BiMicrophone, title: "Новости", url: ROUTER.NEWS_PAGE_ROUTE },
+  { id: 4, icon: FcAbout, title: "О нас", url: ROUTER.ABOUT_PAGE_ROUTE },
+  {
+    id: 5,
+    icon: IoLocationOutline,
+    title: "Контакты",
+    url: ROUTER.CONTACTS_PAGE_ROUTE,
+  },
 ];
 
 export const footerConfig = {
@@ -342,7 +349,7 @@ export const servicesConfig = [
     title:
       "Меры поддержки субъектам промышленности, предусмотренных в 2023 году",
     icon: "",
-    component: <Regional />,
+    component: <SupportMeasures />,
   },
   {
     id: 3,
@@ -378,7 +385,7 @@ export const servicesConfig = [
     id: 8,
     title: "Имущественная поддержка",
     icon: service8,
-    component: <Regional />,
+    component: <PropertySupport />,
   },
   {
     id: 9,

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px;
+  font-family: var(--global-ff);
 
   &-left-side {
     &-list {
@@ -34,7 +35,7 @@
 
           &-title {
             color: #2c2a29;
-            font-size: 18px;
+            font-size: 20px;
 
             &:hover {
               opacity: 0.8;
@@ -44,9 +45,10 @@
 
           &-txt {
             opacity: 0.54;
-            font-size: 14px;
-            color: #2c2a29;
+            font-size: 16px;
+            color: #111111;
             margin-bottom: 50px;
+            overflow: hidden;
           }
 
           &-btn {

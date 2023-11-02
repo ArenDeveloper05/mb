@@ -239,8 +239,12 @@ const initialState = {
 const newsSlice = createSlice({
   name: "news",
   initialState,
-  reducer: {},
+  reducers: {
+    changeNewsData(state, { payload }) {
+      state.news = payload;
+    },
+  },
 });
 
-export const {} = newsSlice.actions;
+export const { changeNewsData } = newsSlice.actions;
 export default newsSlice.reducer;

@@ -35,10 +35,24 @@ button {
   --header-color: #fff;
   --footer-color: #623b2a;
   --global-ff: "Circe", sans-serif;
+  --text-color: #c39367;
 }
 
 body {
   background-color: var(--body-color);
   min-height: 1000px;
   position: relative;
+}
+
+.del-btn,
+.edit-btn {
+  background-color: red;
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+
+.edit-btn {
+  background-color: blue;
 }

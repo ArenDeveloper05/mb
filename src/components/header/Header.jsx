@@ -1,18 +1,26 @@
-import "./Header.scss";
-import Container from "../common/container/Container";
+import { useNavigate } from "react-router-dom";
+import { useRef, useState } from "react";
+
 import { BiMenuAltLeft } from "react-icons/bi";
 import { BsTelephone } from "react-icons/bs";
-import logo from "../../assets/images/logo.png";
-import { useNavigate } from "react-router-dom";
 import { ROUTER } from "../../router/router";
-import { useState } from "react";
-import Menu from "../menu/Menu";
-import FeedbackButton from "./feedback-button/FeedbackButton";
 import { AiOutlineClose } from "react-icons/ai";
+
+import logo from "../../assets/images/logo.png";
+
+import Menu from "../menu/Menu";
+import Container from "../common/container/Container";
+import FeedbackButton from "./feedback-button/FeedbackButton";
+
+import "./Header.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { changeMenuRender } from "../../redux/slices/menuSlice";
 
 const Header = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const render = useSelector((store) => store.menu.menuRender);
+  const dispatch = useDispatch();
 
   return (
     <header className="header">
@@ -22,6 +30,13 @@ const Header = () => {
             <div
               className="burger"
               onClick={() => {
+                dispatch(changeMenuRender(false));
+                if (render) {
+                  setTimeout(() => {
+                    dispatch(changeMenuRender(true));
+                  }, 500);
+                }
+
                 setMenuOpen((prev) => !prev);
               }}
             >
@@ -37,7 +52,7 @@ const Header = () => {
             </div>
           </div>
           <div className="header-inner-right">
-            <a href="">
+            <a>
               <div className="tel-icon">
                 <BsTelephone />
               </div>
@@ -47,7 +62,7 @@ const Header = () => {
           </div>
         </div>
       </Container>
-      <Menu open={menuOpen} />
+      <Menu open={menuOpen} render={render} />
     </header>
   );
 };

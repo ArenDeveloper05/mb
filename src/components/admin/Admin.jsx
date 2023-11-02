@@ -10,9 +10,8 @@ const Admin = () => {
         {adminConfig.map(({ id, title }) => {
           return (
             <div
-              className="field"
+              className={`field ${active === id ? "active" : ""}`}
               key={id}
-              style={{ border: active === id ? "solid" : "none" }}
               onClick={() => {
                 if (id !== active) {
                   setActive(id);
