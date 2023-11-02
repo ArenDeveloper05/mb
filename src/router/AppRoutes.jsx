@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { ROUTER } from "./router";
+
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import ErrorPage from "../pages/ErrorPage";
@@ -9,6 +10,7 @@ import AdminPage from "../pages/AdminPage";
 import NewsSinglePage from "../pages/NewsSinglePage";
 import StateSupportPage from "../pages/StateSupportPage";
 import StateSupportPartSinglePage from "../pages/StateSupportPartSinglePage";
+import AntikrizisModePage from "../pages/AntikrizisModePage";
 
 const AppRoutes = () => {
   return (
@@ -31,6 +33,10 @@ const AppRoutes = () => {
       <Route path={ROUTER.SERVICES_PAGE_ROUTE} element={<ServicesPage />} />
       <Route path={ROUTER.ERROR_PAGE_ROUTE} element={<ErrorPage />} />
       <Route path={ROUTER.ADMIN_PAGE_ROUTE} element={<AdminPage />} />
+      <Route
+        path={ROUTER.ANTIKRIZIS_MODE_PAGE_ROUTE}
+        element={<AntikrizisModePage />}
+      />
     </Routes>
   );
 };

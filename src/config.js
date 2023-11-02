@@ -51,6 +51,8 @@ import newsImg3 from "./assets/images/newsImg3.png";
 
 import Regional from "./components/services/regional/Regional";
 import { ROUTER } from "./router/router";
+import SupportMeasures from "./components/services/support-measures/SupportMeasures";
+import PropertySupport from "./components/services/property-support/PropertySupport";
 
 export const menuConfig = [
   {
@@ -337,7 +339,7 @@ export const servicesConfig = [
     title:
       "Меры поддержки субъектам промышленности, предусмотренных в 2023 году",
     icon: "",
-    component: <Regional />,
+    component: <SupportMeasures />,
   },
   {
     id: 3,
@@ -373,7 +375,7 @@ export const servicesConfig = [
     id: 8,
     title: "Имущественная поддержка",
     icon: service8,
-    component: <Regional />,
+    component: <PropertySupport />,
   },
   {
     id: 9,
