@@ -9,6 +9,7 @@ import AdminPage from "../pages/AdminPage";
 import NewsSinglePage from "../pages/NewsSinglePage";
 import StateSupportPage from "../pages/StateSupportPage";
 import StateSupportPartSinglePage from "../pages/StateSupportPartSinglePage";
+import EventsPage from "../pages/EventsPage";
 
 const AppRoutes = () => {
   return (
@@ -20,14 +21,15 @@ const AppRoutes = () => {
         path={ROUTER.NEWS_SINGLE_PAGE_ROUTE}
         element={<NewsSinglePage />}
       />
-      <Route
+      <Route //
         path={ROUTER.STATE_SUPPORT_PAGE_ROUTE}
         element={<StateSupportPage />}
       />
-      <Route
+      <Route //
         path={ROUTER.STATE_SUPPORT_PAGE_SINGLE_ROUTE}
         element={<StateSupportPartSinglePage />}
       />
+      <Route path={ROUTER.EVENTS_PAGE_ROUTE} element={<EventsPage />} />
       <Route path={ROUTER.SERVICES_PAGE_ROUTE} element={<ServicesPage />} />
       <Route path={ROUTER.ERROR_PAGE_ROUTE} element={<ErrorPage />} />
       <Route path={ROUTER.ADMIN_PAGE_ROUTE} element={<AdminPage />} />

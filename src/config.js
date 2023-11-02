@@ -170,7 +170,12 @@ export const navConfig = [
     title: "Меры господдержки",
     url: ROUTER.STATE_SUPPORT_PAGE_ROUTE,
   },
-  { id: 2, icon: HiOutlineSpeakerphone, title: "Мероприятия", url: "#" },
+  {
+    id: 2,
+    icon: HiOutlineSpeakerphone,
+    title: "Мероприятия",
+    url: ROUTER.EVENTS_PAGE_ROUTE,
+  },
   { id: 3, icon: BiMicrophone, title: "Новости", url: "#" },
   { id: 4, icon: FcAbout, title: "О нас", url: "#" },
   { id: 5, icon: IoLocationOutline, title: "Контакты", url: "#" },
