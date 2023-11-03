@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: Circe;
-  src: url(../src/fonts/fontCirce/Circe-Regular.ttf);
+  src: url(/src/assets/fonts/fontCirce/Circe-Regular.ttf);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
