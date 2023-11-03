@@ -4,7 +4,7 @@
   // border: 1px solid red;
   &-section1 {
     width: 100%;
-    height: 520px;
+    min-height: 520px;
     border: inherit;
     display: flex;
     &-info {
@@ -46,7 +46,7 @@
 
   &-section2 {
     width: 100%;
-    height: 550px;
+    min-height: 550px;
     border: inherit;
     display: flex;
     background-color: #fff;
@@ -111,7 +111,7 @@
 
   &-section3 {
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     border: inherit;
     display: flex;
 
