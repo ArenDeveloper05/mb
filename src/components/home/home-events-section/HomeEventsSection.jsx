@@ -5,7 +5,7 @@ const HomeEventsSection = () => {
   return (
     <section className="home-events-section">
       <div className="home-events-section-head">
-        <h1>Мероприятия</h1>
+        <h1 className="home-events-section-head-title">Мероприятия</h1>
         <form action="" className="home-events-section-head-form">
           <button className="home-events-section-head-form-button">
             все мероприятия

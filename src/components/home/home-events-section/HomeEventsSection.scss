@@ -1,5 +1,5 @@
 .home-events-section {
-  width: var(--global-max-width);
+  // width: var(--global-max-width);
   height: auto;
   // border: 1px solid red;
   margin: auto;
@@ -70,7 +70,7 @@
   }
   &-mounthEvents {
     width: 100%;
-    height: 200px;
+    min-height: 200px;
     border: inherit;
     margin-bottom: 25px;
     display: flex;
@@ -82,11 +82,13 @@
       background-color: #ca9462;
       overflow: hidden;
       border-radius: 10px;
+      margin-top: 10px;
 
       & > a {
         cursor: pointer;
         & > .home-events-section-mounthEvents-item {
-          width: 370px;
+          // width: 370px;
+          width: 100%;
           height: 200px;
           background-color: #daad82;
           border: inherit;

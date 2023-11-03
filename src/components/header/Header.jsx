@@ -5,6 +5,7 @@ import { BiMenuAltLeft } from "react-icons/bi";
 import { BsTelephone } from "react-icons/bs";
 import { ROUTER } from "../../router/router";
 import { AiOutlineClose } from "react-icons/ai";
+import { CiSearch } from "react-icons/ci";
 
 import logo from "../../assets/images/logo.png";
 
@@ -52,13 +53,14 @@ const Header = () => {
             </div>
           </div>
           <div className="header-inner-right">
-            <a>
+            <a className="header-inner-right-link">
               <div className="tel-icon">
                 <BsTelephone />
               </div>
               <span>8 (800) 700 99 00</span>
             </a>
             <FeedbackButton />
+            <CiSearch className="header-inner-right-search-icon" />
           </div>
         </div>
       </Container>

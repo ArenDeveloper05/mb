@@ -64,6 +64,10 @@
         cursor: pointer;
         transition: 0.1s;
       }
+
+      &-search-icon {
+        display: none;
+      }
     }
   }
 }
