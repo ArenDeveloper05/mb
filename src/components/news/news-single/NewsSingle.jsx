@@ -2,14 +2,20 @@ import "./NewsSingle.scss";
 import { useParams } from "react-router-dom";
 import useFetchData from "../../../hooks/useFetchData";
 import { getSingleNews } from "../../../api/api";
+import Loading from "../../loading/Loading";
+import { useEffect } from "react";
 
 const NewsSingle = () => {
   const { id } = useParams();
   const { result, error, loading } = useFetchData(getSingleNews, id);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   return (
     <>
-      {loading && <h1>Loading...</h1>}
+      {loading && <Loading />}
       {result && !loading && !error && (
         <div className="news-single">
           <div className="news-single-images">

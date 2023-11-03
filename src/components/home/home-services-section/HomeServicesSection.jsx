@@ -12,13 +12,15 @@ import howItWorkImg3 from "../../../assets/images/schema3.svg";
 const HomeServicesSection = () => {
   return (
     <section className="home-services-section">
-      <h1>Предоставляемые услуги</h1>
+      <h1 className="home-services-section-title">Предоставляемые услуги</h1>
+
       <div className="home-services-section-servicesContainer">
         {homeServicesConfig.map((item) => {
           return <HomeServicesSectionItem item={item} key={item.id} />;
         })}
       </div>
-      <h1>Как это работает?</h1>
+
+      <h1 className="home-services-section-title">Как это работает?</h1>
       <div className="home-services-section-howItWorkContainer">
         <div className="home-services-section-howItWorkContainer-item">
           <img src={howItWorkImg1} alt="img" />

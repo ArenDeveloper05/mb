@@ -6,7 +6,7 @@ const HomeNewsSection = () => {
   return (
     <section className="home-news-section">
       <div className="home-news-section-top">
-        <h1>Последние новости</h1>
+        <h1 className="home-news-section-top-title">Последние новости</h1>
         <form action="">
           <button>все новости</button>
         </form>
@@ -16,6 +16,10 @@ const HomeNewsSection = () => {
           return <HomeNewsSectionItem item={item} key={item.id} />;
         })}
       </div>
+
+      <form action="" className="home-news-section-form">
+        <button className="home-news-section-form-btn">все новости</button>
+      </form>
     </section>
   );
 };

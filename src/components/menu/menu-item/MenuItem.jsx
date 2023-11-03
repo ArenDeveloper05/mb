@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const MenuItem = ({ item }) => {
+const MenuItem = ({ item, setMenuOpen }) => {
   return (
     <div className="menu-content-item">
       <h2>
@@ -11,7 +11,14 @@ const MenuItem = ({ item }) => {
           {item.list.map(({ id, title, link }) => {
             return (
               <li key={id}>
-                <Link to={link}>{title}</Link>
+                <Link
+                  to={link}
+                  onClick={() => {
+                    setMenuOpen(false);
+                  }}
+                >
+                  {title}
+                </Link>
               </li>
             );
           })}

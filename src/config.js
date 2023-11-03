@@ -1,13 +1,13 @@
 import { BsShield } from "react-icons/bs";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
 import { BiMicrophone } from "react-icons/bi";
-import { FcAbout } from "react-icons/fc";
 import { IoLocationOutline } from "react-icons/io5";
 
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { BiPhoneCall } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiCalendar } from "react-icons/bi";
+import { LiaInfoSolid } from "react-icons/lia";
 
 // Services icons
 import service1 from "./assets/images/services/service1.jpg";
@@ -63,27 +63,27 @@ export const menuConfig = [
       {
         id: 2,
         title: "Расширение доступа к соцконтрактам",
-        link: "",
+        link: "/services?id=3",
       },
       {
         id: 3,
         title: "Реестр предпринимателей РД",
-        link: "",
+        link: "/services?id=5",
       },
       {
         id: 4,
         title: "Региональные меры господдержки",
-        link: "",
+        link: "/services?id=6",
       },
       {
         id: 5,
         title: "Антикризис",
-        link: "",
+        link: `/services?id=12`,
       },
       {
         id: 6,
         title: "Центр инноваций социальной сферы",
-        link: "",
+        link: "/services?id=11",
       },
       {
         id: 7,
@@ -93,47 +93,47 @@ export const menuConfig = [
       {
         id: 8,
         title: "Проведение образовательных мероприятий",
-        link: "",
+        link: "/services?id=18",
       },
       {
         id: 9,
         title: "Финансовая поддержка",
-        link: "",
+        link: "/services?id=13",
       },
       {
         id: 10,
         title: "Региональный центр инжиниринга",
-        link: "",
+        link: "/services?id=20",
       },
       {
         id: 11,
         title: "Имущественная поддержка",
-        link: "",
+        link: "/services?id=8",
       },
       {
         id: 12,
         title: "Портал бизнес-навигатора",
-        link: "",
+        link: "/services?id=19",
       },
       {
         id: 13,
         title: "Центр поддержки предпринимательства",
-        link: "",
+        link: "/services?id=14",
       },
       {
         id: 14,
         title: "Центр народно-художественных промыслов",
-        link: "",
+        link: "/services?id=10",
       },
       {
         id: 15,
         title: "Центр молодежного инновационного творчества",
-        link: "",
+        link: "/services?id=16",
       },
       {
         id: 16,
         title: "МФЦ для Бизнеса",
-        link: "",
+        link: "/services?id=15",
       },
     ],
   },
@@ -179,7 +179,7 @@ export const navConfig = [
     url: ROUTER.EVENTS_PAGE_ROUTE,
   },
   { id: 3, icon: BiMicrophone, title: "Новости", url: ROUTER.NEWS_PAGE_ROUTE },
-  { id: 4, icon: FcAbout, title: "О нас", url: ROUTER.ABOUT_PAGE_ROUTE },
+  { id: 4, icon: LiaInfoSolid, title: "О нас", url: ROUTER.ABOUT_PAGE_ROUTE },
   {
     id: 5,
     icon: IoLocationOutline,

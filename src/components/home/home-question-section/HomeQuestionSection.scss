@@ -25,12 +25,12 @@
   }
 
   &-form {
-    width: 600px;
+    width: 100%;
     display: flex;
     flex-direction: column;
 
     &-input {
-      width: 400px;
+      width: 40%;
       height: 50px;
       background: #ffffff;
       border: none;

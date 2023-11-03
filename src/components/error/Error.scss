@@ -1,0 +1,38 @@
+.error {
+  font-family: var(--global-ff);
+  &-content {
+    max-width: 500px;
+    min-height: 150px;
+    color: #2c2a29;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    margin: auto;
+    margin-top: 100px;
+
+    > h1 {
+      font-size: 40px;
+      font-weight: 400;
+    }
+
+    > p {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    > button {
+      color: #fff;
+      font-size: 14px;
+      padding: 14px 30px;
+      background: #c39367;
+      border: 1px solid #c39367;
+      box-sizing: border-box;
+      border-radius: 4px;
+      transition: 0.3s;
+      margin-bottom: 100px;
+    }
+  }
+}

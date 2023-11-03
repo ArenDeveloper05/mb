@@ -6,15 +6,13 @@
 
   &-left-side {
     &-list {
+      padding-right: 14px;
       list-style-type: none;
-
-      :not(:first-child) {
-        margin-top: 10px;
-      }
 
       &-item {
         display: flex;
         cursor: pointer;
+        margin-top: 10px;
 
         &-images {
           width: 45%;

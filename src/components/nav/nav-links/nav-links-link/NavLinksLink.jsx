@@ -12,7 +12,7 @@ const NavLinksLink = ({ item }) => {
       }}
     >
       <NavLinksLinkIcons item={item} />
-      <p>{item.title}</p>
+      <p className="nav-links-link-title">{item.title}</p>
     </li>
   );
 };

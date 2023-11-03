@@ -1,5 +1,12 @@
+import Error from "../components/error/Error";
+import Layout from "../layout/Layout";
+
 const ErrorPage = () => {
-  return <div className="error">ErrorPage</div>;
+  return (
+    <Layout>
+      <Error />
+    </Layout>
+  );
 };
 
 export default ErrorPage;
