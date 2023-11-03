@@ -9,6 +9,7 @@ export const ROUTER = {
   EVENTS_PAGE_ROUTE: "/events", //
   SERVICES_PAGE_ROUTE: "/services",
   ANTIKRIZIS_MODE_PAGE_ROUTE: "/antikrizis-mode",
+  SELFEMPLOYMENT_MODE_PAGE_ROUTE: "/self-employment-mode",
   ADMIN_PAGE_ROUTE: "/admin_panel",
   ERROR_PAGE_ROUTE: "*",
 };

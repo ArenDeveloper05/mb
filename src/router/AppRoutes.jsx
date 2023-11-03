@@ -13,6 +13,7 @@ import StateSupportPartSinglePage from "../pages/StateSupportPartSinglePage";
 import AntikrizisModePage from "../pages/AntikrizisModePage";
 import ContactsPage from "../pages/ContactsPage";
 import EventsPage from "../pages/EventsPage";
+import SelfEmploymentModePage from "../pages/SelfEmploymentModePage";
 
 const AppRoutes = () => {
   return (
@@ -40,6 +41,10 @@ const AppRoutes = () => {
       <Route
         path={ROUTER.ANTIKRIZIS_MODE_PAGE_ROUTE}
         element={<AntikrizisModePage />}
+      />
+      <Route
+        path={ROUTER.SELFEMPLOYMENT_MODE_PAGE_ROUTE}
+        element={<SelfEmploymentModePage />}
       />
       <Route path={ROUTER.CONTACTS_PAGE_ROUTE} element={<ContactsPage />} />
     </Routes>

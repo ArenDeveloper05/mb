@@ -1,0 +1,136 @@
+.self-employment-mode-section5 {
+  width: 100%;
+  height: auto;
+  //   border: 1px solid red;
+  padding: 1.5rem 0px;
+
+  &-top {
+    width: 100%;
+    height: auto;
+    border: inherit;
+    display: flex;
+    justify-content: space-between;
+
+    & > p {
+      width: 50%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: #212529;
+      text-align: left;
+      padding: 0 20px;
+      margin: 0;
+      border-left: 3px solid #e04e39;
+    }
+
+    &-img {
+      width: 540px;
+      height: 537px;
+      border: inherit;
+      background-image: url(../../../../../assets//images/self-employmeny-section5-img.png);
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: flex-end;
+
+      &-box {
+        width: 328px;
+        // height: 100px;
+        padding: 20px 25px 20px 35px;
+        background: #fff;
+        box-sizing: content-box;
+        box-shadow: 0 5px 12px -1px rgb(0 0 0 / 25%);
+        margin-bottom: 30px;
+        margin-left: -20px;
+
+        & > h4 {
+          font-weight: 600;
+          font-family: "Circe";
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+          line-height: 1.2;
+          color: inherit;
+          text-align: left;
+        }
+
+        & > p {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: 14px;
+          font-style: initial;
+          padding: 0;
+          color: #7d7d7d;
+          font-weight: 300;
+          line-height: 1.5;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &-p1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    padding: 0 20px;
+    margin: 3rem 0px;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    border-left: 3px solid #212529;
+  }
+
+  &-p2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    padding: 0 20px;
+    margin: 3rem 0px;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    border-left: 3px solid #e04e39;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .self-employment-mode-section5 {
+    &-top {
+      flex-direction: column;
+      align-items: center;
+
+      & > p {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      &-img {
+        &-box {
+          margin-left: 0px;
+        }
+      }
+    }
+
+    &-p1 {
+      text-align: center;
+    }
+
+    &-p2 {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .self-employment-mode-section5 {
+    &-top {
+      &-img {
+        width: 100%;
+      }
+    }
+  }
+}
