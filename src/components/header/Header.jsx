@@ -16,12 +16,18 @@ import FeedbackButton from "./feedback-button/FeedbackButton";
 import "./Header.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { changeMenuRender } from "../../redux/slices/menuSlice";
+import HeaderSearch from "./header-search/HeaderSearch";
 
 const Header = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const render = useSelector((store) => store.menu.menuRender);
   const dispatch = useDispatch();
+  const [headerSearch, setHeaderSearch] = useState(false);
+
+  const handleHeaderSearch = () => {
+    setHeaderSearch((prev) => !prev);
+  };
 
   return (
     <header className="header">
@@ -60,7 +66,20 @@ const Header = () => {
               <span>8 (800) 700 99 00</span>
             </a>
             <FeedbackButton />
-            <CiSearch className="header-inner-right-search-icon" />
+
+            {!headerSearch && (
+              <CiSearch
+                className="header-inner-right-search-icon"
+                onClick={handleHeaderSearch}
+              />
+            )}
+            {headerSearch && (
+              <AiOutlineClose
+                className="header-inner-right-close-icon"
+                onClick={handleHeaderSearch}
+              />
+            )}
+            {headerSearch && <HeaderSearch />}
           </div>
         </div>
       </Container>
