@@ -1,12 +1,17 @@
 import { useRef, useState } from "react";
-import "./AdminLogin.scss";
 import { sendAdminValues } from "../../api/api";
+import { CiLock, CiUnlock, CiUser } from "react-icons/ci";
+
+import "./AdminLogin.scss";
+import SendButton from "../common/send-button/SendButton";
 
 const AdminLogin = () => {
   const [loginValues, setLoginValues] = useState({
     login: "",
     password: "",
   });
+
+  const [choose, setChooseIcon] = useState(false);
 
   const loginInput = useRef(null);
   const passwordInput = useRef(null);
@@ -37,48 +42,69 @@ const AdminLogin = () => {
     }
   };
 
+  const sendButtonClick = () => {
+    if (loginValues.login.trim()) {
+      loginInput.current.style.borderBottom = "solid 1px";
+    } else {
+      loginInput.current.style.borderBottom = "solid red 1px";
+    }
+    if (loginValues.password.trim()) {
+      passwordInput.current.style.borderBottom = "solid 1px";
+    } else {
+      passwordInput.current.style.borderBottom = "solid red 1px";
+    }
+
+    if (loginValues.login.trim() && loginValues.password.trim()) {
+      console.log(loginValues);
+      sendValues();
+      clearInputVals();
+    }
+  };
+
   return (
     <div className="admin-login">
-      <p className="admin-login-title">Login</p>
       <div className="admin-login-form">
-        <input
-          type="text"
-          name="login"
-          ref={loginInput}
-          placeholder="login"
-          value={loginValues.login}
-          onChange={handleInputsOnChange}
-        />
-        <input
-          type="password"
-          name="password"
-          ref={passwordInput}
-          placeholder="password"
-          value={loginValues.password}
-          onChange={handleInputsOnChange}
-        />
-        <button
-          onClick={() => {
-            if (loginValues.login.trim()) {
-              loginInput.current.style.border = "solid";
-            } else {
-              loginInput.current.style.border = "solid red";
-            }
-            if (loginValues.password.trim()) {
-              passwordInput.current.style.border = "solid";
-            } else {
-              passwordInput.current.style.border = "solid red";
-            }
+        <p className="admin-login-form-title">Login</p>
 
-            if (loginValues.login.trim() && loginValues.password.trim()) {
-              console.log(loginValues);
-              sendValues();
-              clearInputVals();
-            }
-          }}
-        >
-          send
-        </button>
+        <div className="admin-login-form-prnt">
+          <input
+            type="text"
+            name="login"
+            ref={loginInput}
+            placeholder="Login"
+            value={loginValues.login}
+            onChange={handleInputsOnChange}
+          />
+          <CiUser className="admin-login-form-prnt-icon" />
+        </div>
+
+        <div className="admin-login-form-prnt">
+          <input
+            type={choose ? "text" : "password"}
+            name="password"
+            ref={passwordInput}
+            placeholder="Password"
+            value={loginValues.password}
+            onChange={handleInputsOnChange}
+          />
+          {choose ? (
+            <CiUnlock
+              onClick={() => {
+                setChooseIcon((prev) => !prev);
+              }}
+              className="admin-login-form-prnt-icon"
+            />
+          ) : (
+            <CiLock
+              onClick={() => {
+                setChooseIcon((prev) => !prev);
+              }}
+              className="admin-login-form-prnt-icon"
+            />
+          )}
+        </div>
+
+        <SendButton click={sendButtonClick} />
       </div>
     </div>
   );

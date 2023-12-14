@@ -40,7 +40,6 @@ button {
 
 body {
   background-color: var(--body-color);
-  min-height: 1000px;
   position: relative;
 }
 
