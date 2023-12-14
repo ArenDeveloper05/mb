@@ -10,5 +10,6 @@ export const ROUTER = {
   SERVICES_PAGE_ROUTE: "/services",
   ANTIKRIZIS_MODE_PAGE_ROUTE: "/antikrizis-mode",
   ADMIN_PAGE_ROUTE: "/admin_panel",
+  ADMIN_LOGIN_PAGE_ROUTE: "/admin_panel_login",
   ERROR_PAGE_ROUTE: "*",
 };

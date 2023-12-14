@@ -13,6 +13,7 @@ import StateSupportPartSinglePage from "../pages/StateSupportPartSinglePage";
 import AntikrizisModePage from "../pages/AntikrizisModePage";
 import ContactsPage from "../pages/ContactsPage";
 import EventsPage from "../pages/EventsPage";
+import AdminLoginPage from "../pages/AdminLoginPage";
 
 const AppRoutes = () => {
   return (
@@ -42,6 +43,10 @@ const AppRoutes = () => {
         element={<AntikrizisModePage />}
       />
       <Route path={ROUTER.CONTACTS_PAGE_ROUTE} element={<ContactsPage />} />
+      <Route
+        path={ROUTER.ADMIN_LOGIN_PAGE_ROUTE}
+        element={<AdminLoginPage />}
+      />
     </Routes>
   );
 };

@@ -29,6 +29,10 @@ export const addNews = async (data) => {
   return await api.post(`/news-create`, data);
 };
 
+export const sendAdminValues = async (loginValues) => {
+  return await api.post("url", loginValues);
+};
+
 //DELETE
 export const deleteNews = async (id) => {
   return await api.get(`/news-delete/${id}`);

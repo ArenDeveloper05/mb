@@ -1,0 +1,21 @@
+.admin-login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: cyan;
+
+  &-title {
+    font-size: 44px;
+    font-weight: 600;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+  }
+}
+
+.invalid-border {
+  border: solid red;
+}
