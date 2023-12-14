@@ -53,6 +53,8 @@ import Regional from "./components/services/regional/Regional";
 import { ROUTER } from "./router/router";
 import SupportMeasures from "./components/services/support-measures/SupportMeasures";
 import PropertySupport from "./components/services/property-support/PropertySupport";
+import RegisterOfEntrepreneurs from "./components/services/register-of-entrepreneurs/RegisterOfEntrepreneurs";
+import RegionalStateSupportMeasures from "./components/services/regional-state-support-measures/RegionalStateSupportMeasures";
 
 export const menuConfig = [
   {
@@ -367,13 +369,13 @@ export const servicesConfig = [
     id: 5,
     title: "Реестр предпринимателей РД",
     icon: "",
-    component: <Regional />,
+    component: <RegisterOfEntrepreneurs />,
   },
   {
     id: 6,
     title: "Региональные меры господдержки",
     icon: service6,
-    component: <Regional />,
+    component: <RegionalStateSupportMeasures />,
   },
   {
     id: 7,

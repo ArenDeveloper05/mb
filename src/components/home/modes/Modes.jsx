@@ -8,7 +8,12 @@ const Modes = () => {
 
   return (
     <div className="modes">
-      <div className="modes-mode self-employed">
+      <div
+        className="modes-mode self-employed"
+        onClick={() => {
+          navigate(ROUTER.SELFEMPLOYMENT_MODE_PAGE_ROUTE);
+        }}
+      >
         <p>Режим самозанятых</p>
       </div>
 

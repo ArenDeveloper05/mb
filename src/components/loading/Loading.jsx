@@ -2,13 +2,13 @@ import "./Loading.scss";
 
 const Loading = () => {
   return (
-    <div class="🤚">
-      <div class="👉"></div>
-      <div class="👉"></div>
-      <div class="👉"></div>
-      <div class="👉"></div>
-      <div class="🌴"></div>
-      <div class="👍"></div>
+    <div className="🤚">
+      <div className="👉"></div>
+      <div className="👉"></div>
+      <div className="👉"></div>
+      <div className="👉"></div>
+      <div className="🌴"></div>
+      <div className="👍"></div>
     </div>
   );
 };
